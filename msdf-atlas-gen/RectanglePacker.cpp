@@ -62,9 +62,9 @@ int RectanglePacker::pack(Rectangle *rectangles, int count) {
         int bestFit = WORST_FIT;
         int bestSpace = -1;
         int bestRect = -1;
-        for (size_t i = 0; i < spaces.size(); ++i) {
+        for (int i = 0; i < (int)spaces.size(); ++i) {
             const Rectangle &space = spaces[i];
-            for (size_t j = 0; j < remainingRects.size(); ++j) {
+            for (int j = 0; j < (int)remainingRects.size(); ++j) {
                 const Rectangle &rect = rectangles[remainingRects[j]];
                 if (rect.w == space.w && rect.h == space.h) {
                     bestSpace = i;
@@ -102,9 +102,9 @@ int RectanglePacker::pack(OrientedRectangle *rectangles, int count) {
         int bestSpace = -1;
         int bestRect = -1;
         bool bestRotated = false;
-        for (size_t i = 0; i < spaces.size(); ++i) {
+        for (int i = 0; i < (int)spaces.size(); ++i) {
             const Rectangle &space = spaces[i];
-            for (size_t j = 0; j < remainingRects.size(); ++j) {
+            for (int j = 0; j < (int)remainingRects.size(); ++j) {
                 const OrientedRectangle &rect = rectangles[remainingRects[j]];
                 if (rect.w == space.w && rect.h == space.h) {
                     bestSpace = i;

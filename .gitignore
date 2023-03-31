@@ -18,6 +18,9 @@
 *.suo
 *.VC.opendb
 *.VC.db
+*vcxproj
+*vcxproj.filters
+*vcxproj.user
 /bin/*.lib
 /bin/msdf-atlas-gen
 output.png

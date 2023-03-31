@@ -19,7 +19,8 @@ project "msdf-atlas-gen"
 
 	includedirs
 	{
-		"msdfgen"
+		"msdfgen",
+		"msdfgen/core"
 	}
 
 	links
@@ -29,9 +30,6 @@ project "msdf-atlas-gen"
 
 	defines
 	{
-		"MSDFGEN_PUBLIC=",
-		"MSDF_ATLAS_PUBLIC=", -- static link
-		"MSDF_ATLAS_NO_ARTERY_FONT",
 		"_CRT_SECURE_NO_WARNINGS"
 	}
 
